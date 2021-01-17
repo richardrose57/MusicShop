@@ -1,8 +1,7 @@
-DROP TABLE purchase;
 CREATE TABLE purchase(
-  ID NUMBER NOT NULL PRIMARY KEY,
-  username VARCHAR2(30),
-  instrument_id NUMBER,
+  ID NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1),
+  username VARCHAR2(30) NOT NULL,
+  instrument_id NUMBER NOT NULL,
   shop_id NUMBER,
-  date_of_purchase DATE
+  date_of_entry DATE DEFAULT SYSDATE
 )TABLESPACE users;

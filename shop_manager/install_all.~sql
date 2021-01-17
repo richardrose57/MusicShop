@@ -1,5 +1,4 @@
 PROMPT Installing DB...
-alter session set "_ORACLE_SCRIPT"=true;
 --sequences
 CREATE SEQUENCE seq_instru_h_id START WITH 1;
 

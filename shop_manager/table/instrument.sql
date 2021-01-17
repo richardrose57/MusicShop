@@ -1,13 +1,11 @@
-drop table purchase;
-DROP TABLE instrument;
 CREATE TABLE instrument(
-       ID NUMBER NOT NULL PRIMARY KEY
+       ID NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1)
       ,type VARCHAR2(40) NOT NULL
       ,brand VARCHAR2(40) NOT NULL
       ,brand_type VARCHAR2(40)
-      ,cost NUMBER
+      ,cost NUMBER NOT NULL
       ,date_of_manufacture DATE
-      ,date_of_entry DATE
-      ,active BOOLEAN DEFAULT TRUE
+      ,date_of_entry DATE DEFAULT SYSDATE
+      ,active VARCHAR2(1) DEFAULT '1'
 )TABLESPACE users;
 
