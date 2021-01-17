@@ -1,0 +1,7 @@
+CREATE TABLE purchase(
+  ID NUMBER NOT NULL PRIMARY KEY,
+  user_id NUMBER,
+  instrument_id NUMBER,
+  shop_id NUMBER,
+  date_of_purchase DATE
+)TABLESPACE users;

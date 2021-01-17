@@ -1,0 +1,8 @@
+CREATE TABLE instrument(
+       ID NUMBER NOT NULL PRIMARY KEY,
+       type VARCHAR2(40) NOT NULL,
+       brand VARCHAR2(40) NOT NULL,
+       cost NUMBER,
+       date_of_manufacture DATE,
+       date_of_entry DATE
+)TABLESPACE users;

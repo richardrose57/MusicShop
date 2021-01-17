@@ -1,0 +1,4 @@
+CREATE TABLE shop(
+       id NOT NULL PRIMARY KEY,
+       ADDRESS VARCHAR2(200) 
+)TABLESPACE users;
