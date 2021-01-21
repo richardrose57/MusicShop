@@ -7,5 +7,5 @@ BEGIN
      SELECT STANDARD_HASH(2000) INTO v_hash_pw FROM DUAL;
 
      INSERT INTO customer(username, password, first_name, last_name) 
-                 VALUES(iv_username, v_hash_pw, iv_first_name, iv_last_name);
+                 VALUES(iv_username, v_hash_pw, iv_first_name, iv_last_name)
 END create_customer;

@@ -13,5 +13,5 @@
                    
   INSERT INTO purchase (username, instrument_id,shop_id, date_of_entry)
                    VALUES('okoskaaa',1,1, sysdate );
-  INSERT INTO purchase (username, instrument_id, date_of_entry)
-                   VALUES('butuskaaa',1, sysdate );
+  INSERT INTO purchase (username, instrument_id,shop_id, date_of_entry)
+                   VALUES('butuskaaa',1,2, sysdate );

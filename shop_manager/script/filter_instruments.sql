@@ -17,16 +17,16 @@ BEGIN
                           THEN '%'
                           ELSE iv_instru_type
                         END
-              AND   cost BETWEEN
-                        CASE
-                           WHEN iv_min_cost = IS NULL
-                           THEN '%'
-                           ELSE iv_min_cost
-                        END AND
-                        CASE
-                           WHEN iv_max_cost = IS NULL
-                           THEN '%'
-                           ELSE iv_max_cost
-                        END ;
+             AND   cost <= CASE 
+                          WHEN iv_min_cost IS NULL
+                          THEN '%'
+                          ELSE iv_min_cost
+                        END
+             AND   cost >= CASE 
+                          WHEN iv_max_cost IS NULL
+                          THEN '%'
+                          ELSE iv_max_cost
+                        END;
+             
   DBMS_SQL.return_result(q);  
 END filter_instruments;

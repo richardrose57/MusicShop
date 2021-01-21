@@ -6,7 +6,6 @@ DECLARE
 BEGIN
   SELECT USER INTO v_mod_user FROM DUAL;
   
-
     INSERT INTO instrument_h
       (instrument_id
       ,new_cost
@@ -18,5 +17,6 @@ BEGIN
       ,:new.cost
       ,:new.active
       ,v_mod_user);
+      
 END;
 /

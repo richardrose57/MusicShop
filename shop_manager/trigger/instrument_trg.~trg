@@ -1,4 +1,4 @@
-CREATE OR REPLACE NONEDITIONABLE TRIGGER instrument_h_trg
+CREATE OR REPLACE TRIGGER instrument_h_trg
   AFTER INSERT OR UPDATE ON instrument
   FOR EACH ROW
 DECLARE
@@ -6,7 +6,6 @@ DECLARE
 BEGIN
   SELECT USER INTO v_mod_user FROM DUAL;
   
-
     INSERT INTO instrument_h
       (instrument_id
       ,new_cost
@@ -14,7 +13,7 @@ BEGIN
       ,mod_user
   )
     VALUES
-      (:old.id
+      (:new.id
       ,:new.cost
       ,:new.active
       ,v_mod_user);
