@@ -1,6 +1,8 @@
 ----------------------------------
 -- 1. Create user, add grants   --
 ----------------------------------
+
+
 alter session set "_ORACLE_SCRIPT"=true;
 DECLARE
   l_cnt NUMBER;
@@ -15,8 +17,7 @@ END;
 CREATE USER shop_manager 
   IDENTIFIED BY 12345678
   DEFAULT TABLESPACE USERS
-  QUOTA UNLIMITED ON users
-;
+  QUOTA UNLIMITED ON users;
 
 GRANT CREATE SESSION TO shop_manager;
 GRANT CREATE TABLE TO shop_manager;

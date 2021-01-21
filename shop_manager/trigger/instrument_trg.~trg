@@ -1,4 +1,4 @@
-CREATE OR REPLACE TRIGGER instrument_h_trg
+CREATE OR REPLACE NONEDITIONABLE TRIGGER instrument_h_trg
   AFTER INSERT OR UPDATE ON instrument
   FOR EACH ROW
 DECLARE
@@ -14,7 +14,7 @@ BEGIN
       ,mod_user
   )
     VALUES
-      (:new.id
+      (:old.id
       ,:new.cost
       ,:new.active
       ,v_mod_user);

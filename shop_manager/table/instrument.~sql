@@ -6,6 +6,6 @@ CREATE TABLE instrument(
       ,cost NUMBER NOT NULL
       ,date_of_manufacture DATE
       ,date_of_entry DATE DEFAULT SYSDATE
-      ,active VARCHAR2(1) DEFAULT "1"
+      ,active VARCHAR2(1) DEFAULT '1'
 )TABLESPACE users;
 
